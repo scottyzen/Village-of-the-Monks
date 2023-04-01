@@ -1,6 +1,8 @@
 <template>
   <div>
-    <app-masthead featuredImage="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304548/duiske-abbey-header-large.jpg"></app-masthead>
+    <app-masthead
+      featuredImage="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304548/duiske-abbey-header-large.jpg"
+    ></app-masthead>
     <div class="container">
       <div class="flex flex-wrap justify-between">
         <div class="w-full tracking-tight text-gray-600 md:w-5/12">
@@ -30,12 +32,20 @@
             and 9th centuries. Built into the wall of the Abbey is a Cross Slab,
             also in the abbey grounds is the base of a third cross.
           </p>
-          <img class="hidden w-full md:block" src="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304556/duiske-abbey-bell.png" alt="Drawing of the clock and bell of the Duskie Abbey" />
+          <img
+            class="hidden w-full md:block"
+            src="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304556/duiske-abbey-bell.png"
+            alt="Drawing of the clock and bell of the Duskie Abbey"
+          />
         </div>
         <div class="w-full tracking-tight text-gray-600 md:w-1/2 md:-mt-32">
-          <img src="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304548/duiske-abbey-inside_x2.jpg" class="my-4 mobile-dont-move md:my-0" alt="The roof of Duiske Abbey from the inside"
-            :style="{ transform: `translate3D(0, ${scrollPos * 0.05}px, 0)` }" />
-          <h2 class="title md:mt-24">A Breif History</h2>
+          <img
+            src="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304548/duiske-abbey-inside_x2.jpg"
+            class="my-4 mobile-dont-move md:my-0"
+            alt="The roof of Duiske Abbey from the inside"
+            :style="{ transform: `translate3D(0, ${scrollPos * 0.05}px, 0)` }"
+          />
+          <h2 class="title md:mt-24">A Brief History</h2>
           <p class="mb-2">
             The Abbey was founded in 1204 by William Marshall the elder, earl of
             Pembroke, and was colonized with monks from Stanley in Wiltshire.
@@ -92,16 +102,19 @@ export default {
   head() {
     return {
       title: "Duiske Abbey | Village of the Monks",
-      meta: [{
-        hid: "description",
-        name: "description",
-        content:
-          "Duiske Abbey originated in the 13th century as the church of a Cistercian monastery, but today it is a Catholic parish church in the town of Graiguenamanagh, County Kilkenny. Where Father Gerry Byrne is the local priest.",
-      }, {
-        name: "keywords",
-        content:
-          "Graiguenamanagh, Graignamanagh, abbey, Village, Monks, South-east, Kilkenny, Carlow, Catholic, Castle, Brandon, Hill, Town, Books, Church, parish, Ireland, Duiske, monastery",
-      }],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Duiske Abbey originated in the 13th century as the church of a Cistercian monastery, but today it is a Catholic parish church in the town of Graiguenamanagh, County Kilkenny. Where Father Gerry Byrne is the local priest.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Graiguenamanagh, Graignamanagh, abbey, Village, Monks, South-east, Kilkenny, Carlow, Catholic, Castle, Brandon, Hill, Town, Books, Church, parish, Ireland, Duiske, monastery",
+        },
+      ],
     };
   },
   data() {
