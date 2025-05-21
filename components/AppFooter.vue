@@ -1,55 +1,44 @@
 <template>
   <div id="footer" class="text-white">
-    <div
-      class="container flex flex-col flex-wrap justify-end pt-48 pb-16 md:flex-row"
-    >
+    <div class="container flex flex-col flex-wrap justify-end pt-48 pb-16 md:flex-row">
       <div class="flex-1">
         <!-- Logo  -->
-        <nuxt-link class="flex items-end justify-between w-8 logo" exact to="/">
+        <NuxtLink class="flex items-end justify-between w-8 logo" exact to="/">
           <img
             src="https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304557/logo.min.png"
             width="57"
             height="108"
-            alt="Village of the Monks logo"
-          />
+            alt="Village of the Monks logo" />
           <span>Village of the Monks</span>
-        </nuxt-link>
+        </NuxtLink>
       </div>
 
       <div class="flex flex-col mt-8 mr-10 md:mt-0">
         <div class="mb-2 text-lg font-secondary">Sights</div>
-        <nuxt-link class="text-sm text-gray-400" to="/brandonhill"
-          >Brandon Hill</nuxt-link
-        >
-        <nuxt-link class="text-sm text-gray-400" to="/duiskeabbey"
-          >Duiske Abbey</nuxt-link
-        >
-        <nuxt-link class="text-sm text-gray-400" to="/tinnahinchcastle"
-          >Tinnahinch Castle</nuxt-link
-        >
-        <nuxt-link class="text-sm text-gray-400" to="/riverbarrow"
-          >River Barrow</nuxt-link
-        >
+        <NuxtLink class="text-sm text-gray-400" to="/brandonhill">Brandon Hill</NuxtLink>
+        <NuxtLink class="text-sm text-gray-400" to="/duiskeabbey">Duiske Abbey</NuxtLink>
+        <NuxtLink class="text-sm text-gray-400" to="/tinnahinchcastle">
+          Tinnahinch Castle
+        </NuxtLink>
+        <NuxtLink class="text-sm text-gray-400" to="/riverbarrow">River Barrow</NuxtLink>
         <!-- Get the rest of the pages from Prismic -->
-        <nuxt-link
+        <NuxtLink
           class="text-sm text-gray-400"
           :to="`/${page.uid}`"
           v-for="page in this.$store.state.pages"
           :key="page.id"
-          >{{ page.data.title[0].text }}</nuxt-link
+          >{{ page.data.title[0].text }}</NuxtLink
         >
       </div>
 
       <div class="flex flex-col mt-8 mr-10 md:mt-0">
-        <div class="mb-2 text-lg font-secondary">Poems and Articals</div>
+        <div class="mb-2 text-lg font-secondary">Poems and Articles</div>
 
-        <nuxt-link class="text-sm text-gray-400" to="/thedesertedvillage"
-          >The Deserted Village</nuxt-link
+        <NuxtLink class="text-sm text-gray-400" to="/thedesertedvillage"
+          >The Deserted Village</NuxtLink
         >
-        <nuxt-link
-          class="text-sm text-gray-400 capitalize"
-          to="/ioncewaslostnowimfound"
-          >I once was lost</nuxt-link
+        <NuxtLink class="text-sm text-gray-400 capitalize" to="/ioncewaslostnowimfound"
+          >I once was lost</NuxtLink
         >
       </div>
 
@@ -133,11 +122,7 @@
       <div class="container flex justify-end py-4">
         <div class="text-sm text-gray-500">
           © {{ new Date().getFullYear() }} villageofthemonks.com by
-          <a
-            href="https://scottyzen.com"
-            target="_blank"
-            rel="noopener"
-            class="text-yellow-500"
+          <a href="https://scottyzen.com" target="_blank" rel="noopener" class="text-yellow-500"
             >Scott Kennedy</a
           >
         </div>
@@ -149,16 +134,16 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch("getPages");
+    this.$store.dispatch('getPages');
   },
 };
 </script>
 
 <style lang="postcss">
 #footer {
-  background: url("https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304560/brush-strokes-dark.png")
+  background: url('https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304560/brush-strokes-dark.png')
       no-repeat,
-    url("https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304562/pattern-dark-bg.png");
+    url('https://res.cloudinary.com/odriscolls/image/upload/q_auto,f_auto/v1584304562/pattern-dark-bg.png');
   background-size: 100% auto, 50%;
 
   & a {

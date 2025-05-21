@@ -28,18 +28,18 @@
 
     <div v-if="relatedProducts" class="mt-16">
       <h3 class="title">You Might Also Like</h3>
-      <ul class="container grid grid-cols-3 gap-12 ">
+      <ul class="container grid grid-cols-3 gap-12">
         <li
           class="w-full bg-white border-8 border-white shadow"
           v-for="product in relatedProducts"
           :key="product.id"
         >
-          <nuxt-link :to="product.uid">
+          <NuxtLink :to="product.uid">
             <img :src="product.data.main_product_image.Thumbnail.url" alt="" />
             <p class="mt-2 text-sm text-gray-800">
               {{ product.data.title[0].text }}
             </p>
-          </nuxt-link>
+          </NuxtLink>
         </li>
       </ul>
     </div>
